@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+
+<meta charset="utf-8">
+<html>
+
+<head>
+    <link rel="shortcut icon" href="urdu_multisearch.ico" type="image/x-icon">
+    <style>
+        body {
+            background-color: paleturquoise;
+        }
+
+        p {
+            font: 1.5em sans-serif;
+        }
+
+        input,
+        button {
+            /* reset user agent stylesheet */
+            background-color: transparent;
+            padding: 0;
+            border: 0;
+            border-radius: 0;
+            color: inherit;
+            appearance: none;
+
+            /* make sure properties affecting height have same value */
+            font-size: 1em;
+            line-height: 1.2;
+            padding: 0.5em var(--padding-x);
+            border-width: 2px;
+            border-style: solid;
+        }
+
+        button {
+            display: inline-flex;
+            justify-content: center;
+            /* center the content horizontally */
+            align-items: center;
+            /* center the content vertically */
+            --padding-x: 1.2em;
+            border-color: transparent;
+            /* hide button border */
+        }
+
+        input {
+            --padding-x: 0.5em;
+        }
+
+
+        .urdu {
+            font-family: "Jameel Noori Nastaleeq", "Noto Nastaliq Urdu";
+            font-size: 3rem;
+            direction: rtl;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>What Urdu word would you like to multisearch? For example, <span class="urdu">پیچھے</span></p>
+    <form>
+        <input type="text" placeholder="Look up word" size="25" id="inputWord" required>
+        <button type="button" id="btnOpenAll">&#128270; Search</button>
+        <button type="button" id="btnCloseAll">&#9851; Reset search</button>
+    </form>
+    <script>
+
+        document.getElementById("inputWord").onkeydown = function (e) { getKeyDown(e) };
+        document.getElementById("btnOpenAll").onclick = function () { openWindows() }
+        document.getElementById("btnCloseAll").onclick = function () { closeWindows() };
+
+        var wins = [];
+
+        function getKeyDown(e) {
+            if (e.which == 13) {
+                openWindows();
+            }
+        }
+
+        function openWindows() {
+            var q = document.getElementById("inputWord").value;
+            var urls = [
+                "http://images.google.com.pk/search?q=" + q + "&tbm=isch&sout=1",
+                "http://www.forvo.com/search/" + q + "/ur",
+                "https://www.urduinc.com/english-dictionary/" + q + "-meaning-in-urdu",
+                "https://rekhta.org/urdudictionary/?lang=1&keyword=" + q,
+                "http://urdulughat.info/words/advance-search/name%3A" + q,
+                "https://ur-wiktionary-org.translate.goog/wiki/" + q + "?_x_tr_sl=ur&_x_tr_tl=en&_x_tr_hl=en",
+                "https://tatoeba.org/eng/sentences/search?query=" + q + "&from=urd&to=eng&orphans=no&unapproved=no&native=yes&user=&tags=&list=&has_audio=&trans_filter=limit&trans_to=eng&trans_link=&trans_user=&trans_orphan=&trans_unapproved=&trans_has_audio=&sort=words",
+                "https://glosbe.com/ur/en/" + q
+            ];
+
+            urls.forEach(url => {
+                wins.push(window.open(url));
+            });
+            document.getElementById("inputWord").value = "";
+        }
+
+        function closeWindows() {
+            if (wins === 0) {
+                return;
+            }
+            wins.forEach(win => {
+                win.close();
+            });
+        }
+
+
+    </script>
+</body>
+
+</html>
