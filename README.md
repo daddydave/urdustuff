@@ -2,7 +2,7 @@
 
 ## urdu_multisearch.html
 
-This is a custom version of the [Fluent Forever multisearch](https://blog.fluent-forever.com/multi-search/), specifically for Urdu. It will look up the word entered on a few different sites, such as Forvo, Glosbe, Tatoeba, Google Images, etc.
+This is a custom version of the [Fluent Forever legacy multisearch](https://blog.fluent-forever.com/multi-search/), specifically for Urdu. It will look up the word entered on a few different sites, such as Forvo, Glosbe, Tatoeba, Google Images, etc.
 
 I added a reset button to close the tabs opened.
 
