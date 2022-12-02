@@ -11,8 +11,3 @@ To use, just download the file and run it locally in your browser. You will be a
 ## urdu_multisearch.ico
 
 Optional favicon to use with urdu_multisearch.html (I'm using as Vivaldi side panel icon). Thanks [favicon.io](https://favicon.io)
-
-## Sentence Maker for Urdu.docx
-## Sentence Maker for Urdu (blank).docx
-
-This is an unofficial Urdu version of Rupert Snell's [Sentence-Maker](https://repositories.lib.utexas.edu/handle/2152/41435) in Hindi, including a blank version you can fill in with other vocabulary.
