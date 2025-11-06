@@ -4,9 +4,9 @@
 
 Anki flashcards to accompany a YouTube video I made. I intended the [How To Type Urdu](https://youtu.be/hWgh3ceHAeQ) video to stand alone,
  since a lot of the Urdu typing mnemonics are obvious, such as a t for ت and r for ر. So please watch the video first, perhaps more than 
-once. But x for ش is harder to remember. For the harder to remember mnemonics, I ended up creating an Anki flashcards package. Ideally for me, you don't need an
- explanation of Spaced Repetition Systems and why Anki is the best. I will simply say you may want to immediately suspend every card 
-tagged *TypeUrduSoundalikes* to hide most of the "obvious" ones. 
+once. 
+
+But I realized x for ش is not so obvious, and it is for these harder to remember ones I created a set of Anki flashcards. For completeness, I included the obvious ones mentioned in the video as well. Ideally for me, you don't need an explanation of Spaced Repetition Systems and why Anki is the best. I will simply say you may want to immediately suspend every card tagged *TypeUrduSoundalikes* to hide most of the "obvious" ones.
 
 ## urdu_multisearch.html
 
